@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>User details</h1>
+     Name:<%= user1.name %><p>
+     Email:<%= user1.email %><p>
+     password: <%= user1.password %><p>
+    <a href="/users/update/<%= user1._id%>"><button type="button" name="button">Update</button></a>
+    <button type="button" onclick="del()" name="button">Delete</button>
+  </body>
+  <script type="text/javascript">
+    function del() {
+      var co = confirm("Are you sure!!");
+      if(co){
+        location.href = "/users/delete/<%=user1._id%>"
+      }
+    }
+  </script>
+</html>
