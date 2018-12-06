@@ -11,7 +11,7 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-mongoose.connect('mongodb://127.0.0.1/studyNodedb');
+mongoose.connect('mongodb://yethuaung:Zikimi95@ds125048.mlab.com:25048/studynode');
 var db = mongoose.connection;
 db.on('error',console.error.bind(console,'MongoDB connection error:'));
 
